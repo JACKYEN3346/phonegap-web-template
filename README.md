@@ -1,18 +1,29 @@
-# phonegap-web-template
-A website template for Adobe PhoneGap Build
-
-- GitHub: https://github.com/pulipulichen/phonegap-web-template
-
-----
-
-# Customization Guide
-
-- config.xml
-- icon.png: Change your favicon. You can use [Iconshock](http://www.playpcesor.com/2017/09/iconshock-edit-icons.html) or [Icon Slayer](http://www.gieson.com/Library/projects/utilities/icon_slayer/).
-- www/index.html: title, content, copyright, redirect URI
-
-# Build you APP
-
-- Adobe PhoneGap Build: https://build.phonegap.com/
-- KeyStore for Android: http://blog.pulipuli.info/2015/07/phonegap-buildandroid-apk-how-to-build.html
--  
+<div id="muteYouTubeVideoPlayer"></div>
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+function onYouTubeIframeAPIReady() {
+var player;
+player = new YT.Player('muteYouTubeVideoPlayer', {
+videoId: '2ymhllPMCrg', // YouTube 影片 ID
+width: 650, // 播放器寬度 (in px)
+height: 356, // 播放器長度 (in px)
+playerVars: {
+autoplay: 1, // 自動播放視頻
+controls: 1, // 顯示播放/暫停按鈕
+showinfo: 0, // 隱藏影片標題
+modestbranding: 1, // 隱藏YouTube LOGO
+loop: 1, // 循環播放
+fs: 0, // 隱藏全螢幕視窗按鈕
+cc_load_policty: 0, // 隱藏關閉字幕
+iv_load_policy: 3, // 隱藏影片註釋
+autohide: 0 // 播放時隱藏影片控制按鈕
+},
+events: {
+onReady: function(e) {
+e.target.mute(); // 靜音
+}
+}
+});
+}
+// Written by @labnol
+</script>
